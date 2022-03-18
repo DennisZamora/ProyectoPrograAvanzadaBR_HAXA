@@ -1,0 +1,12 @@
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\bin\Debug\netcoreapp3.1\BE.DAL.DO.deps.json
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\bin\Debug\netcoreapp3.1\BE.DAL.DO.runtimeconfig.json
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\bin\Debug\netcoreapp3.1\BE.DAL.DO.runtimeconfig.dev.json
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\bin\Debug\netcoreapp3.1\BE.DAL.DO.dll
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\bin\Debug\netcoreapp3.1\BE.DAL.DO.pdb
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\obj\Debug\netcoreapp3.1\BE.DAL.DO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\obj\Debug\netcoreapp3.1\BE.DAL.DO.AssemblyInfoInputs.cache
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\obj\Debug\netcoreapp3.1\BE.DAL.DO.AssemblyInfo.cs
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\obj\Debug\netcoreapp3.1\BE.DAL.DO.csproj.CoreCompileInputs.cache
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\obj\Debug\netcoreapp3.1\BE.DAL.DO.dll
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\obj\Debug\netcoreapp3.1\BE.DAL.DO.pdb
+D:\Universidad\Vll\PrograAvanzada\Proyecto\ProyectoBienesRaices\BE.DAL.DO\obj\Debug\netcoreapp3.1\BE.DAL.DO.genruntimeconfig.cache
