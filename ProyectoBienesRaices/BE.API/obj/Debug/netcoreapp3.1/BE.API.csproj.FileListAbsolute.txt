@@ -152,3 +152,5 @@ D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRa
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.API\obj\Debug\netcoreapp3.1\BE.API.dll
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.API\obj\Debug\netcoreapp3.1\BE.API.pdb
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.API\obj\Debug\netcoreapp3.1\BE.API.genruntimeconfig.cache
+D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.API\bin\Debug\netcoreapp3.1\BE.BS.dll
+D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.API\bin\Debug\netcoreapp3.1\BE.BS.pdb

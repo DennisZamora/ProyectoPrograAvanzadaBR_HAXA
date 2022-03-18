@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="8.1.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.21" />
@@ -25,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BE.DAL.DO\BE.DAL.DO.csproj" />
-    <ProjectReference Include="..\BE.DAL\BE.DAL.csproj" />
+    <ProjectReference Include="..\BE.BS\BE.BS.csproj" />
+    <ProjectReference Include="..\BE.DAL.EF\BE.DAL.EF.csproj" />
   </ItemGroup>
 
 

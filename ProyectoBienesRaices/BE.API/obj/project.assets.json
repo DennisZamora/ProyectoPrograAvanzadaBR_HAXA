@@ -1593,6 +1593,22 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "BE.BS/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BE.DAL": "1.0.0",
+          "BE.DAL.DO": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.21",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.21"
+        },
+        "compile": {
+          "bin/placeholder/BE.BS.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BE.BS.dll": {}
+        }
+      },
       "BE.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -6016,6 +6032,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "BE.BS/1.0.0": {
+      "type": "project",
+      "path": "../BE.BS/BE.BS.csproj",
+      "msbuildProject": "../BE.BS/BE.BS.csproj"
+    },
     "BE.DAL/1.0.0": {
       "type": "project",
       "path": "../BE.DAL/BE.DAL.csproj",
@@ -6041,8 +6062,8 @@
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 8.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.1.1",
-      "BE.DAL >= 1.0.0",
-      "BE.DAL.DO >= 1.0.0",
+      "BE.BS >= 1.0.0",
+      "BE.DAL.EF >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.21",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.21",
@@ -6077,11 +6098,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.DAL.DO\\BE.DAL.DO.csproj": {
-              "projectPath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.DAL.DO\\BE.DAL.DO.csproj"
+            "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.BS\\BE.BS.csproj": {
+              "projectPath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.BS\\BE.BS.csproj"
             },
-            "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.DAL\\BE.DAL.csproj": {
-              "projectPath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.DAL\\BE.DAL.csproj"
+            "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.DAL.EF\\BE.DAL.EF.csproj": {
+              "projectPath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.DAL.EF\\BE.DAL.EF.csproj"
             }
           }
         }
