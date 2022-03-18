@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tMNG1ZBxqY75byDNLUNP3lBRge2ulJg7wmZgGLdElqZaOvuieiQrCLQ1lnUdeYAdq2PlYog63L5QGWZMm22k9w==",
+  "dgSpecHash": "BTiXDWtW6D5jFJ9HSQ4dIfA4Hfe758ZmcBoGWtmktFWMrBen3y1pMIm5aBRWkzzpe4KYFqe3jYz0vP8/6dMDZg==",
   "success": true,
-  "projectFilePath": "D:\\Universidad\\Vll\\PrograAvanzada\\Proyecto\\ProyectoBienesRaices\\BE.API\\BE.API.csproj",
+  "projectFilePath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.API\\BE.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\denza\\.nuget\\packages\\automapper\\8.1.1\\automapper.8.1.1.nupkg.sha512",
     "C:\\Users\\denza\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.1.1\\automapper.extensions.microsoft.dependencyinjection.6.1.1.nupkg.sha512",

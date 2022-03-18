@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hS4A2fpBhYVTZRpSSBWFoFfYzesoczjyRVcxgrus1Et9kpzWQWgP9kAXdjEX7WpoTE9FBuDEYglETEBbuLXjeg==",
+  "dgSpecHash": "7MqzoevaKLAeE+uyopkVHIyzxZNRjARYwRV/VDPWLr2FFHNQxyMpFHi3+vLELt6mYf2qVB+uLcXl99k+NdlF/Q==",
   "success": true,
-  "projectFilePath": "D:\\Universidad\\Vll\\PrograAvanzada\\Proyecto\\ProyectoBienesRaices\\BE.DAL.DO\\BE.DAL.DO.csproj",
+  "projectFilePath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoBienesRaices\\BE.DAL.DO\\BE.DAL.DO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\denza\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\denza\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
