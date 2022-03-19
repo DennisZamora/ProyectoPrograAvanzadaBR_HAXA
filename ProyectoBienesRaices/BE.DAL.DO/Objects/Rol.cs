@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BE.DAL.DO.Objects
 {
-    public class Rol
+    public partial class Rol
     {
         public Rol()
         {

@@ -4,14 +4,14 @@ using System.Text;
 
 namespace BE.DAL.DO.Objects
 {
-    public class Usuario
+    public partial class Usuario
     {
         public Usuario()
         {
             //Propiedad = new HashSet<Propiedad>();
         }
 
-        public long IdUsuario { get; set; }
+        public int IdUsuario { get; set; }
         public string CedulaIdentificacion { get; set; }
         public string Nombre { get; set; }
         public string Apellido1 { get; set; }

@@ -54,7 +54,16 @@ namespace BE.DAL.Repository
 
         public T GetOnebyID(int id)
         {
-            return dbContext.Set<T>().Find(id);
+            try
+            {
+return dbContext.Set<T>().Find(id);
+            }
+            catch (Exception ee)
+            {
+
+                throw;
+            }
+            
         }
 
         public void Insert(T t)
