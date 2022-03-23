@@ -86,7 +86,7 @@ namespace BE.API.Controllers
         {
             try
             {
-                data.Rol mapaAux = _mapper.Map<models.Rol, data.Rol>(Rol);
+                data.Rol mapaAux = _mapper.Map<models.Rol, data.Rol>(Rol);//Rev
                 new BE.BS.Rol(_context).Insert(mapaAux);
             }
             catch (Exception)

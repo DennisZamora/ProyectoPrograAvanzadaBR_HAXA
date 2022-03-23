@@ -33,7 +33,7 @@ namespace BE.API.Controllers
                 List<models.Usuario> mapaAux = _mapper.Map<IEnumerable<data.Usuario>, IEnumerable<models.Usuario>>(respuesta).ToList();
                 return mapaAux;
             }
-            catch (Exception)
+            catch (Exception ee)
             {
 
                 throw;

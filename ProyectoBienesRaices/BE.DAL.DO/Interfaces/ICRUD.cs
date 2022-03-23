@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BE.DAL.DO.Interfaces
+namespace BE.DAL.DO
 {
     public interface ICRUD<T>
     {

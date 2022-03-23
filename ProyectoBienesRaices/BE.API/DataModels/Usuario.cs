@@ -9,7 +9,7 @@ namespace BE.API.DataModels
     {
         public Usuario()
         {
-            //Propiedad = new HashSet<Propiedad>();
+            Propiedad = new HashSet<Propiedad>();
         }
 
         public int IdUsuario { get; set; }
@@ -22,7 +22,7 @@ namespace BE.API.DataModels
         public string Password { get; set; }
         public int IdRol { get; set; }
 
-        //public virtual Rol IdRolNavigation { get; set; }
-        //public virtual ICollection<Propiedad> Propiedad { get; set; }
+        public virtual Rol IdRolNavigation { get; set; }
+        public virtual ICollection<Propiedad> Propiedad { get; set; }
     }
 }

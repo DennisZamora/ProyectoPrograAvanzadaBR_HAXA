@@ -4,7 +4,7 @@ using System.Text;
 using data = BE.DAL.DO.Objects;
 using BE.DAL.EF;
 using BE.DAL.Repository;
-using BE.DAL.DO.Interfaces;
+using BE.DAL.DO;
 using System.Threading.Tasks;
 
 namespace BE.DAL

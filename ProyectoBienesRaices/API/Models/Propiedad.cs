@@ -24,7 +24,7 @@ namespace API.Models
         public int? Habitacion { get; set; }
         public int? Baños { get; set; }
         public int? Garage { get; set; }
-        public long IdUsuario { get; set; }
+        public int IdUsuario { get; set; }
         public string Precio { get; set; }
 
         public virtual Categoria IdCategoriaNavigation { get; set; }

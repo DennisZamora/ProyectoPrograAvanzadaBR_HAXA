@@ -7,14 +7,13 @@ using System.Text;
 
 namespace BE.DAL.Repository
 {
-    public class RepositoryRol<T> : IRepositoryRol<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         protected readonly NDbContext dbContext;
-        public RepositoryRol(NDbContext _dbContext)
+        public Repository(NDbContext _dbContext)
         {
             dbContext = _dbContext;
         }
-
         public void AddRange(IEnumerable<T> t)
         {
             dbContext.Set<T>().AddRange(t);
@@ -38,25 +37,16 @@ namespace BE.DAL.Repository
             }
             catch (Exception ee)
             {
+
                 throw;
             }
         }
 
         public IEnumerable<T> GetAll()
         {
-            return dbContext.Set<T>();
-        }
-
-        public T GetOne(Expression<Func<T, bool>> predicado)
-        {
-            return dbContext.Set<T>().Where(predicado).FirstOrDefault();
-        }
-
-        public T GetOnebyID(int id)
-        {
             try
             {
-return dbContext.Set<T>().Find(id);
+                return dbContext.Set<T>();
             }
             catch (Exception ee)
             {
@@ -66,6 +56,16 @@ return dbContext.Set<T>().Find(id);
             
         }
 
+        public T GetOne(Expression<Func<T, bool>> predicado)
+        {
+            return dbContext.Set<T>().Where(predicado).FirstOrDefault();
+        }
+
+        public T GetOnebyID(int id)
+        {
+            return dbContext.Set<T>().Find(id);
+        }
+
         public void Insert(T t)
         {
             try
@@ -73,13 +73,14 @@ return dbContext.Set<T>().Find(id);
                 if (dbContext.Entry<T>(t).State == Microsoft.EntityFrameworkCore.EntityState.Detached)
                 {
                     dbContext.Entry<T>(t).State = Microsoft.EntityFrameworkCore.EntityState.Added;
+
                 }
                 else
                 {
                     dbContext.Set<T>().Add(t);
                 }
             }
-            catch (Exception)
+            catch (Exception ee)
             {
 
                 throw;
@@ -106,9 +107,8 @@ return dbContext.Set<T>().Find(id);
 
                 }
                 dbContext.Entry<T>(t).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-
             }
-            catch (Exception)
+            catch (Exception ee)
             {
 
                 throw;

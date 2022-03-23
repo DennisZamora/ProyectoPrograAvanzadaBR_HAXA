@@ -9,13 +9,12 @@ using data = BE.DAL.DO.Objects;
 
 namespace BE.DAL.Repository
 {
-    public class RepositoryUsuario : RepositoryRol<data.Usuario>, IRepositoryUsuario
+    public class RepositoryUsuario : Repository<data.Usuario>, IRepositoryUsuario
     {
         public RepositoryUsuario(NDbContext _dbContext) : base(_dbContext)
         {
 
         }
-
         public async Task<IEnumerable<Usuario>> GetAllAsync()
         {
             return await _db.Usuario.Include(n => n.IdRol).ToListAsync();
@@ -23,14 +22,9 @@ namespace BE.DAL.Repository
 
         public async Task<Usuario> GetOneByIdAsync(int id)
         {
-            return await _db.Usuario.Include(n => n.IdRol).SingleOrDefaultAsync(n => n.IdRol == id);
+            return await _db.Usuario.Include(n => n.IdRol).SingleOrDefaultAsync(n => n.IdUsuario == id);
         }
-        private NDbContext _db
-        {
-            get
-            {
-                return dbContext as NDbContext;
-            }
-        }
+
+        private NDbContext _db { get { return dbContext as NDbContext; } }
     }
 }

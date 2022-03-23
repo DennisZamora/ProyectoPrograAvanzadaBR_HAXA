@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using data = BE.DAL.DO.Objects;
+﻿using data = BE.DAL.DO.Objects;
 using dal = BE.DAL;
-using BE.DAL.DO.Interfaces;
-using System.Threading.Tasks;
+using BE.DAL.DO;
 using BE.DAL.EF;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 
 namespace BE.BS
 {
-    public class Rol :ICRUD<data.Rol>
+    public class Rol : ICRUD<data.Rol>
     {
         private dal.Rol _dal;
-
         public Rol(NDbContext dbContext)
         {
             _dal = new dal.Rol(dbContext);
@@ -30,7 +28,7 @@ namespace BE.BS
 
         public Task<IEnumerable<data.Rol>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
 
         public data.Rol GetOneById(int id)
@@ -40,7 +38,7 @@ namespace BE.BS
 
         public Task<data.Rol> GetOneByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
 
         public void Insert(data.Rol t)

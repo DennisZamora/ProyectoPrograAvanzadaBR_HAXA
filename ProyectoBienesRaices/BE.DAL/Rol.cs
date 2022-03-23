@@ -1,4 +1,4 @@
-﻿using BE.DAL.DO.Interfaces;
+﻿using BE.DAL.DO;
 using BE.DAL.EF;
 using BE.DAL.Repository;
 using System;
@@ -11,10 +11,10 @@ namespace BE.DAL
 {
     public class Rol : ICRUD<data.Rol>
     {
-        private RepositoryRol<data.Rol> repo;
+        private Repository<data.Rol> repo;
         public Rol(NDbContext dbContext)
         {
-            repo = new RepositoryRol<data.Rol>(dbContext);
+            repo = new Repository<data.Rol>(dbContext);
         }
         public void Delete(data.Rol t)
         {

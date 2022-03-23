@@ -9,12 +9,12 @@ namespace BE.API.DataModels
     {
         public Rol()
         {
-            //Usuario = new HashSet<Usuario>();
+            Usuario = new HashSet<Usuario>();
         }
 
         public int IdRol { get; set; }
         public string NombreRol { get; set; }
 
-        //public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<Usuario> Usuario { get; set; }
     }
 }
