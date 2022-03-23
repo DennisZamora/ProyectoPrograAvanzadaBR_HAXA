@@ -24,8 +24,8 @@ namespace BE.DAL.EF
 
         public virtual DbSet<Propiedad> Propiedad { get; set; }
 
-        public virtual DbSet<Categoria> Categorias { get; set; }
-        public virtual DbSet<Estado> Estados { get; set; }
+        public virtual DbSet<Categoria> Categoria { get; set; }
+        public virtual DbSet<Estado> Estado { get; set; }
 
 
 
