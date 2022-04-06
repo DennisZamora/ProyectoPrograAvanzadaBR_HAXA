@@ -27,6 +27,9 @@ namespace BE.DAL.EF
         public virtual DbSet<Categoria> Categoria { get; set; }
         public virtual DbSet<Estado> Estado { get; set; }
 
+        public virtual DbSet<Cita> Cita { get; set; }
+        public virtual DbSet<Empleado> Empleado { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -43,6 +46,85 @@ namespace BE.DAL.EF
                     .HasColumnName("nombre")
                     .HasMaxLength(60)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Empleado>(entity =>
+            {
+                entity.HasKey(e => e.IdEmpleado)
+                    .HasName("pk_empleado");
+
+                entity.Property(e => e.IdEmpleado).HasColumnName("idEmpleado");
+
+                entity.Property(e => e.Apellido1)
+                    .IsRequired()
+                    .HasColumnName("apellido1")
+                    .HasMaxLength(80)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Apellido2)
+                    .HasColumnName("apellido2")
+                    .HasMaxLength(80)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.CedulaIdentificacion)
+                    .IsRequired()
+                    .HasColumnName("cedula_identificacion")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasColumnName("email")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Nombre)
+                    .IsRequired()
+                    .HasColumnName("nombre")
+                    .HasMaxLength(80)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Telefono)
+                    .IsRequired()
+                    .HasColumnName("telefono")
+                    .HasMaxLength(40)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Cita>(entity =>
+            {
+                entity.HasKey(e => e.IdCita)
+                    .HasName("pk_cita");
+
+                entity.ToTable("cita");
+
+                entity.Property(e => e.IdCita).HasColumnName("idCita");
+
+                entity.Property(e => e.FechaFinal)
+                    .HasColumnName("fechaFinal")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FechaInicio)
+                    .HasColumnName("fechaInicio")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IdPropiedad).HasColumnName("idPropiedad");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+
+                //entity.HasOne(d => d.IdPropiedadNavigation)
+                //    .WithMany(p => p.Cita)
+                //    .HasForeignKey(d => d.IdPropiedad)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("fk_cita_propiedad");
+
+                //entity.HasOne(d => d.IdUsuarioNavigation)
+                //    .WithMany(p => p.Cita)
+                //    .HasForeignKey(d => d.IdUsuario)
+                //    .OnDelete(DeleteBehavior.ClientSetNull)
+                //    .HasConstraintName("fk_cita_usuario");
             });
 
             modelBuilder.Entity<Estado>(entity =>
