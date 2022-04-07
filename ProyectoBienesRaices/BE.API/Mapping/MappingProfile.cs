@@ -16,6 +16,7 @@ namespace BE.API.Mapping
             CreateMap<data.Categoria, DataModels.Categoria>().ReverseMap();
             CreateMap<data.Estado, DataModels.Estado>().ReverseMap();
             CreateMap<data.Propiedad, DataModels.Propiedad>().ReverseMap();
+            CreateMap<data.Empleado, DataModels.Empleado>().ReverseMap();
         }
     }
 }

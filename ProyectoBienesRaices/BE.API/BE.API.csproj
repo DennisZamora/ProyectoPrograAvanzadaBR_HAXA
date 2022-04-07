@@ -26,9 +26,5 @@
     <ProjectReference Include="..\BE.DAL.EF\BE.DAL.EF.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 
 </Project>
