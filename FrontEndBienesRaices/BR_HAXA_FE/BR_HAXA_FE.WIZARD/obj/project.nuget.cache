@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n0+KtTWrlKjHq+KRWF33AfMesGaMkZOHZZisi2TqwtSjiGw4j25wBHopIVKuPSmMXY/ttRr/kRTFJ5zfk1SCiQ==",
+  "dgSpecHash": "AgGTXoUnP/AlKE8DnwpSdXCZOS3hZ7CUhERTrjem5c2E3bo6AVGvIS8u4wv1WwrUJwJQOj9PVrauBMPRiTeTmQ==",
   "success": true,
-  "projectFilePath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\FrontEndBienesRaices\\BR_HAXA_FE\\BR_HAXA_FE.WIZARD\\BR_HAXA_FE.WIZARD.csproj",
+  "projectFilePath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoPrograAvanzadaBR_HAXA\\FrontEndBienesRaices\\BR_HAXA_FE\\BR_HAXA_FE.WIZARD\\BR_HAXA_FE.WIZARD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\denza\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\denza\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
