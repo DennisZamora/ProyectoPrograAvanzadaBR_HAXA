@@ -73,3 +73,4 @@ D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAv
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAvanzadaBR_HAXA\FrontEndBienesRaices\BR_HAXA_FE\BR_HAXA_FE\obj\Debug\netcoreapp3.1\BR_HAXA_FE.pdb
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAvanzadaBR_HAXA\FrontEndBienesRaices\BR_HAXA_FE\BR_HAXA_FE\obj\Debug\netcoreapp3.1\BR_HAXA_FE.genruntimeconfig.cache
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAvanzadaBR_HAXA\FrontEndBienesRaices\BR_HAXA_FE\BR_HAXA_FE\obj\Debug\netcoreapp3.1\BR_HAXA_FE.csproj.CopyComplete
+D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAvanzadaBR_HAXA\FrontEndBienesRaices\BR_HAXA_FE\BR_HAXA_FE\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

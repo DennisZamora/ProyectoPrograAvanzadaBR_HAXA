@@ -1,3 +1,4 @@
+using BR_HAXA_FE.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +24,14 @@ namespace BR_HAXA_FE
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddScoped<IRolServices, RolServices>();
+            services.AddScoped<IUsuarioServices, UsuarioServices>();
+            services.AddScoped<IEmpleadoServices, EmpleadoServices>();
+            services.AddScoped<ICitaServices, CitaServices>();
+            services.AddScoped<ICategoriaServices, CategoriaServices>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

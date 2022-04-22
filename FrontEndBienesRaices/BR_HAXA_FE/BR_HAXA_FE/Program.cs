@@ -11,6 +11,8 @@ namespace BR_HAXA_FE
 {
     public class Program
     {
+        
+        public static string baseurl = "http://localhost:49597";
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
