@@ -4,63 +4,60 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<link rel=StyleSheet href="~/Content/Perfil.css" type="text/css" media=screen>
 
-<div>
-    <h4>Usuario</h4>
+
+<h2 style="text-align:center;">Detalles del usuario</h2>
+<h2 style="text-align:center;">Detalles del usuario</h2>
+
+<hr />
+<div class="login-block">
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CedulaIdentificacion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CedulaIdentificacion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellido1)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Apellido1)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Apellido2)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Apellido2)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefono)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefono)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Password)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdRolNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdRolNavigation.IdRol)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.IdUsuario">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label">Cedula</label>
+                    <input asp-for="CedulaIdentificacion" class="form-control" readonly="readonly"/>
+                    <span asp-validation-for="CedulaIdentificacion" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Nombre" class="control-label"></label>
+                    <input asp-for="Nombre" class="form-control" readonly="readonly"/>
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Primer Apellido</label>
+                    <input asp-for="Apellido1" class="form-control" readonly="readonly"/>
+                    <span asp-validation-for="Apellido1" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Segundo Apellido</label>
+                    <input asp-for="Apellido2" class="form-control" readonly="readonly"/>
+                    <span asp-validation-for="Apellido2" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Telefono" class="control-label"></label>
+                    <input asp-for="Telefono" class="form-control" readonly="readonly"/>
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Correo electronico</label>
+                    <input asp-for="Email" class="form-control" readonly="readonly"/>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Contraseña</label>
+                    <input asp-for="Password" class="form-control" readonly="readonly"/>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <a asp-action="Edit" asp-route-id="@Model.IdUsuario">Editar</a> |
+                    <a asp-action="Index">Volver a la lista</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
