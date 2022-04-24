@@ -1,0 +1,38 @@
+﻿@model BR_HAXA_FE.IDENTITY.Models.Rol
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<link rel=StyleSheet href="~/Content/Perfil.css" type="text/css" media=screen>
+
+
+<h2 style="text-align:center;">Detalles del rol</h2>
+<h2 style="text-align:center;">Detalles del rol</h2>
+
+<hr />
+<div class="login-block">
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label class="control-label">Nombre del rol</label>
+                    <input asp-for="NombreRol" class="form-control" readonly="readonly" />
+                    <span asp-validation-for="NombreRol" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <a asp-action="Edit" asp-route-id="@Model.IdRol">Editar</a> |
+                    <a asp-action="Index">Volver a la lista</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+

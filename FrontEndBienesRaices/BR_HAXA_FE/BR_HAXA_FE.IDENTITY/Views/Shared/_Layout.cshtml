@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=StyleSheet href="~/Content/css.css" type="text/css" media=screen>
+    <link rel=StyleSheet href="~/Content/main.css" type="text/css" media=screen>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <!-- qTip -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css" />
+
+    <!-- Full Calendar -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.9.1/fullcalendar.print.css" media="print" />
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/limonte-sweetalert2/sweetalert2.min.css" />
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/jquery.timepicker.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navbar-header">
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                <a href="@Url.Action("Index","Home")" class="w3-bar-item w3-button"><b>BR</b> HAXA</a>
+                <div class="navbar-collapse">
+                    
+                    <!-- Float links to the right. Hide them on small screens -->
+                    <div class="w3-right">
+                        @*@if (Session["Rol"] == null)
+        {
+            <a href="@Url.Action("Login","LogIn")" class="w3-bar-item w3-button">Iniciar sesion</a>
+            <a href="@Url.Action("Register","Register")" class="w3-bar-item w3-button">Registrarse</a>
+        }*@
+                       
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <!-- Footer -->
+        <!--<footer class="w3-center w3-black w3-padding-16">
+            <p>&copy; @DateTime.Now.Year Bienes Raices HAXA</p>
+        </footer>-->
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
