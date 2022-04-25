@@ -46,3 +46,19 @@ D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAv
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.dll
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.pdb
 D:\Universidad\Vll\PrograAvanzada\ProyectoPrograAvanzadaBR_HAXA\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.genruntimeconfig.cache
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\bin\Debug\netcoreapp3.1\BE.DAL.EF.deps.json
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\bin\Debug\netcoreapp3.1\BE.DAL.EF.runtimeconfig.json
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\bin\Debug\netcoreapp3.1\BE.DAL.EF.runtimeconfig.dev.json
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\bin\Debug\netcoreapp3.1\BE.DAL.EF.dll
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\bin\Debug\netcoreapp3.1\BE.DAL.EF.pdb
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\bin\Debug\netcoreapp3.1\BE.DAL.DO.dll
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\bin\Debug\netcoreapp3.1\BE.DAL.DO.pdb
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.csproj.AssemblyReference.cache
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.AssemblyInfoInputs.cache
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.AssemblyInfo.cs
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.csproj.CoreCompileInputs.cache
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.csproj.CopyComplete
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.dll
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.pdb
+C:\Users\oscar\Documents\7mo Cuat\3. Programacion Avanzada Web\Proyecto\ProyectoPrograAvanzadaBR_HAXA\ProyectoBienesRaices\BE.DAL.EF\obj\Debug\netcoreapp3.1\BE.DAL.EF.genruntimeconfig.cache

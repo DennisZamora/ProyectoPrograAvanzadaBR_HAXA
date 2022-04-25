@@ -3,7 +3,6 @@ using BE.DAL.EF;
 using BE.DAL.Repository;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using data = BE.DAL.DO.Objects;
 
@@ -11,12 +10,10 @@ namespace BE.DAL
 {
     public class Propiedad : ICRUD<data.Propiedad>
     {
-        private Repository<data.Propiedad> repo;
-
+        private RepositoryPropiedad repo;
         public Propiedad(NDbContext dbContext)
         {
-            repo = new Repository<data.Propiedad>(dbContext);
-
+            repo = new RepositoryPropiedad(dbContext);
         }
 
         public void Delete(data.Propiedad t)

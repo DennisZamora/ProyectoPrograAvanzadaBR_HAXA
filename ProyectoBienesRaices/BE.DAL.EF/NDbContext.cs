@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using BE.DAL.DO.Objects;
+﻿using BE.DAL.DO.Objects;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace BE.DAL.EF
 {
@@ -16,21 +12,23 @@ namespace BE.DAL.EF
            : base(options)
         {
         }
-        //public virtual DbSet<Categoria> Categoria { get; set; }
-        // public virtual DbSet<Estado> Estado { get; set; }
-        //public virtual DbSet<Propiedad> Propiedad { get; set; }
+        public virtual DbSet<Categoria> Categoria { get; set; }
+        public virtual DbSet<Cita> Cita { get; set; }
+        public virtual DbSet<Empleado> Empleado { get; set; }
+        public virtual DbSet<Estado> Estado { get; set; }
+        public virtual DbSet<Imagenes> Imagenes { get; set; }
+        public virtual DbSet<Propiedad> Propiedad { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
 
-        public virtual DbSet<Propiedad> Propiedad { get; set; }
-
-        public virtual DbSet<Categoria> Categoria { get; set; }
-        public virtual DbSet<Estado> Estado { get; set; }
-
-        public virtual DbSet<Cita> Cita { get; set; }
-        public virtual DbSet<Empleado> Empleado { get; set; }
-
-
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Server=PC-OSCAR;Database=BienesRaicesHaxaProgra;Trusted_Connection=True;");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -46,6 +44,40 @@ namespace BE.DAL.EF
                     .HasColumnName("nombre")
                     .HasMaxLength(60)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Cita>(entity =>
+            {
+                entity.HasKey(e => e.IdCita)
+                    .HasName("pk_cita");
+
+                entity.Property(e => e.IdCita).HasColumnName("idCita");
+
+                entity.Property(e => e.FechaFinal)
+                    .HasColumnName("fechaFinal")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FechaInicio)
+                    .HasColumnName("fechaInicio")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IdPropiedad).HasColumnName("idPropiedad");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+
+                entity.HasOne(d => d.IdPropiedadNavigation)
+                    .WithMany(p => p.Cita)
+                    .HasForeignKey(d => d.IdPropiedad)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_cita_propiedad");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Cita)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_cita_usuario");
             });
 
             modelBuilder.Entity<Empleado>(entity =>
@@ -91,42 +123,6 @@ namespace BE.DAL.EF
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Cita>(entity =>
-            {
-                entity.HasKey(e => e.IdCita)
-                    .HasName("pk_cita");
-
-                entity.ToTable("cita");
-
-                entity.Property(e => e.IdCita).HasColumnName("idCita");
-
-                entity.Property(e => e.FechaFinal)
-                    .HasColumnName("fechaFinal")
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.FechaInicio)
-                    .HasColumnName("fechaInicio")
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.IdPropiedad).HasColumnName("idPropiedad");
-
-                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
-
-                //entity.HasOne(d => d.IdPropiedadNavigation)
-                //    .WithMany(p => p.Cita)
-                //    .HasForeignKey(d => d.IdPropiedad)
-                //    .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("fk_cita_propiedad");
-
-                //entity.HasOne(d => d.IdUsuarioNavigation)
-                //    .WithMany(p => p.Cita)
-                //    .HasForeignKey(d => d.IdUsuario)
-                //    .OnDelete(DeleteBehavior.ClientSetNull)
-                //    .HasConstraintName("fk_cita_usuario");
-            });
-
             modelBuilder.Entity<Estado>(entity =>
             {
                 entity.HasKey(e => e.IdEstado)
@@ -139,6 +135,27 @@ namespace BE.DAL.EF
                     .HasColumnName("nombre")
                     .HasMaxLength(50)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Imagenes>(entity =>
+            {
+                entity.HasKey(e => e.IdImagen)
+                    .HasName("pk_imagenes");
+
+                entity.Property(e => e.IdImagen).HasColumnName("idImagen");
+
+                entity.Property(e => e.IdPropiedad).HasColumnName("idPropiedad");
+
+                entity.Property(e => e.Link)
+                    .HasColumnName("link")
+                    .HasMaxLength(400)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.IdPropiedadNavigation)
+                    .WithMany(p => p.Imagenes)
+                    .HasForeignKey(d => d.IdPropiedad)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_imagenes_propiedad");
             });
 
             modelBuilder.Entity<Propiedad>(entity =>
@@ -182,10 +199,6 @@ namespace BE.DAL.EF
                 entity.Property(e => e.IdEstado).HasColumnName("idEstado");
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
-
-                entity.Property(e => e.Imagen)
-                    .HasColumnName("imagen")
-                    .HasColumnType("image");
 
                 entity.Property(e => e.M2).HasColumnName("m2");
 
@@ -301,8 +314,6 @@ namespace BE.DAL.EF
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
-
     }
 
 }

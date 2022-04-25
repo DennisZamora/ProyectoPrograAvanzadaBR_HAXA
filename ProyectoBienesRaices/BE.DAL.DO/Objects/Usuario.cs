@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace BE.DAL.DO.Objects
 {
@@ -8,6 +6,7 @@ namespace BE.DAL.DO.Objects
     {
         public Usuario()
         {
+            Cita = new HashSet<Cita>();
             Propiedad = new HashSet<Propiedad>();
         }
 
@@ -22,6 +21,7 @@ namespace BE.DAL.DO.Objects
         public int IdRol { get; set; }
 
         public virtual Rol IdRolNavigation { get; set; }
+        public virtual ICollection<Cita> Cita { get; set; }
         public virtual ICollection<Propiedad> Propiedad { get; set; }
     }
 }

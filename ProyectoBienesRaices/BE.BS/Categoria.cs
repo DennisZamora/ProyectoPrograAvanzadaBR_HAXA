@@ -1,10 +1,10 @@
 ﻿
-using data = BE.DAL.DO.Objects;
-using dal = BE.DAL;
 using BE.DAL.DO;
 using BE.DAL.EF;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using dal = BE.DAL;
+using data = BE.DAL.DO.Objects;
 
 namespace BE.BS
 {

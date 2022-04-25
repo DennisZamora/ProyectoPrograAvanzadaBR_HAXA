@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace BE.DAL.DO.Objects
 {
     public partial class Propiedad
     {
-        public long IdPropiedad { get; set; }
-        public byte[] Imagen { get; set; }
+        public Propiedad()
+        {
+            Cita = new HashSet<Cita>();
+            Imagenes = new HashSet<Imagenes>();
+        }
+        public int IdPropiedad { get; set; }
         public string Nombre { get; set; }
         public string Provincia { get; set; }
         public string Canton { get; set; }
@@ -27,5 +29,7 @@ namespace BE.DAL.DO.Objects
         public virtual Categoria IdCategoriaNavigation { get; set; }
         public virtual Estado IdEstadoNavigation { get; set; }
         public virtual Usuario IdUsuarioNavigation { get; set; }
+        public virtual ICollection<Cita> Cita { get; set; }
+        public virtual ICollection<Imagenes> Imagenes { get; set; }
     }
 }

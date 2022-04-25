@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using data = BE.DAL.DO.Objects;
+﻿using BE.DAL.DO;
 using BE.DAL.EF;
 using BE.DAL.Repository;
-using BE.DAL.DO;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using data = BE.DAL.DO.Objects;
 
 namespace BE.DAL
 {

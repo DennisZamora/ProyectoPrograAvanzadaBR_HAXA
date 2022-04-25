@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BE.API.DataModels
 {
@@ -9,6 +6,7 @@ namespace BE.API.DataModels
     {
         public Usuario()
         {
+            Cita = new HashSet<Cita>();
             Propiedad = new HashSet<Propiedad>();
         }
 
@@ -23,6 +21,7 @@ namespace BE.API.DataModels
         public int IdRol { get; set; }
 
         public virtual Rol IdRolNavigation { get; set; }
+        public virtual ICollection<Cita> Cita { get; set; }
         public virtual ICollection<Propiedad> Propiedad { get; set; }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
@@ -20,7 +18,10 @@ namespace BE.API.Models
         }
 
         public virtual DbSet<Categoria> Categoria { get; set; }
+        public virtual DbSet<Cita> Cita { get; set; }
+        public virtual DbSet<Empleado> Empleado { get; set; }
         public virtual DbSet<Estado> Estado { get; set; }
+        public virtual DbSet<Imagenes> Imagenes { get; set; }
         public virtual DbSet<Propiedad> Propiedad { get; set; }
         public virtual DbSet<Rol> Rol { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
@@ -29,7 +30,7 @@ namespace BE.API.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=PC-OSCAR;Database=BienesRaicesHaxaProgra;Trusted_Connection=True;");
             }
         }
@@ -50,6 +51,83 @@ namespace BE.API.Models
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<Cita>(entity =>
+            {
+                entity.HasKey(e => e.IdCita)
+                    .HasName("pk_cita");
+
+                entity.Property(e => e.IdCita).HasColumnName("idCita");
+
+                entity.Property(e => e.FechaFinal)
+                    .HasColumnName("fechaFinal")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FechaInicio)
+                    .HasColumnName("fechaInicio")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IdPropiedad).HasColumnName("idPropiedad");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
+
+                entity.HasOne(d => d.IdPropiedadNavigation)
+                    .WithMany(p => p.Cita)
+                    .HasForeignKey(d => d.IdPropiedad)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_cita_propiedad");
+
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Cita)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_cita_usuario");
+            });
+
+            modelBuilder.Entity<Empleado>(entity =>
+            {
+                entity.HasKey(e => e.IdEmpleado)
+                    .HasName("pk_empleado");
+
+                entity.Property(e => e.IdEmpleado).HasColumnName("idEmpleado");
+
+                entity.Property(e => e.Apellido1)
+                    .IsRequired()
+                    .HasColumnName("apellido1")
+                    .HasMaxLength(80)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Apellido2)
+                    .HasColumnName("apellido2")
+                    .HasMaxLength(80)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.CedulaIdentificacion)
+                    .IsRequired()
+                    .HasColumnName("cedula_identificacion")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasColumnName("email")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Nombre)
+                    .IsRequired()
+                    .HasColumnName("nombre")
+                    .HasMaxLength(80)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Telefono)
+                    .IsRequired()
+                    .HasColumnName("telefono")
+                    .HasMaxLength(40)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<Estado>(entity =>
             {
                 entity.HasKey(e => e.IdEstado)
@@ -62,6 +140,27 @@ namespace BE.API.Models
                     .HasColumnName("nombre")
                     .HasMaxLength(50)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Imagenes>(entity =>
+            {
+                entity.HasKey(e => e.IdImagen)
+                    .HasName("pk_imagenes");
+
+                entity.Property(e => e.IdImagen).HasColumnName("idImagen");
+
+                entity.Property(e => e.IdPropiedad).HasColumnName("idPropiedad");
+
+                entity.Property(e => e.Link)
+                    .HasColumnName("link")
+                    .HasMaxLength(400)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.IdPropiedadNavigation)
+                    .WithMany(p => p.Imagenes)
+                    .HasForeignKey(d => d.IdPropiedad)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_imagenes_propiedad");
             });
 
             modelBuilder.Entity<Propiedad>(entity =>
@@ -105,10 +204,6 @@ namespace BE.API.Models
                 entity.Property(e => e.IdEstado).HasColumnName("idEstado");
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
-
-                entity.Property(e => e.Imagen)
-                    .HasColumnName("imagen")
-                    .HasColumnType("image");
 
                 entity.Property(e => e.M2).HasColumnName("m2");
 

@@ -13,19 +13,19 @@ namespace BE.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PropiedadesController : Controller
+    public class PropiedadController : Controller
     {
         private readonly NDbContext _context;
         private readonly IMapper _mapper;
-        public PropiedadesController(NDbContext context, IMapper mapper)
+        public PropiedadController(NDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
 
-        // GET: api/Propiedads
+        // GET: api/Propiedad
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<models.Propiedad>>> GetPropiedades()
+        public async Task<ActionResult<IEnumerable<models.Propiedad>>> GetPropiedad()
         {
             var res = new BE.BS.Propiedad(_context).GetAll();
             List<models.Propiedad> mapaAux = _mapper.Map<IEnumerable<data.Propiedad>, IEnumerable<models.Propiedad>>(res).ToList();
@@ -34,7 +34,7 @@ namespace BE.API.Controllers
 
         // GET: api/Propiedad/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<models.Propiedad>> GetPropiedades(int id)
+        public async Task<ActionResult<models.Propiedad>> GetPropiedad(int id)
         {
             var Propiedad = new BE.BS.Propiedad(_context).GetOneById(id);
 

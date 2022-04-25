@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using data = BE.DAL.DO.Objects;
 
 namespace BE.API.Mapping
@@ -17,6 +13,8 @@ namespace BE.API.Mapping
             CreateMap<data.Estado, DataModels.Estado>().ReverseMap();
             CreateMap<data.Propiedad, DataModels.Propiedad>().ReverseMap();
             CreateMap<data.Empleado, DataModels.Empleado>().ReverseMap();
+            CreateMap<data.Cita, DataModels.Cita>().ReverseMap();
+            CreateMap<data.Imagenes, DataModels.Imagenes>().ReverseMap();
         }
     }
 }
