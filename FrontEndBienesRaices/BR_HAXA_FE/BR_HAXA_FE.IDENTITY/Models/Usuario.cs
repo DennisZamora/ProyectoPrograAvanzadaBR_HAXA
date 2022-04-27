@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
@@ -11,8 +10,8 @@ namespace BR_HAXA_FE.IDENTITY.Models
     {
         public Usuario()
         {
-            //Cita = new HashSet<Cita>();
-            //Propiedad = new HashSet<Propiedad>();
+            Cita = new HashSet<Cita>();
+            Propiedad = new HashSet<Propiedad>();
         }
 
         public int IdUsuario { get; set; }
@@ -26,7 +25,7 @@ namespace BR_HAXA_FE.IDENTITY.Models
         public int IdRol { get; set; }
 
         public virtual Rol IdRolNavigation { get; set; }
-        //public virtual ICollection<Cita> Cita { get; set; }
-        //public virtual ICollection<Propiedad> Propiedad { get; set; }
+        public virtual ICollection<Cita> Cita { get; set; }
+        public virtual ICollection<Propiedad> Propiedad { get; set; }
     }
 }
