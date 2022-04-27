@@ -26,12 +26,12 @@ namespace BR_HAXA_FE.IDENTITY.Controllers
                 var properties = new List<PropiedadV>();
                 var prop = "";//PropiedadServices.GetAll();
                 var imagen = "";//ImagenServices.GetAll();
-                properties.Add(new PropiedadV
-                        {
-                            //Property = prop,
-                            //Img = imagen
-                        });
-                
+                //properties.Add(new PropiedadV
+                //{
+                //    Property = prop,
+                //    Img = imagen
+                //});
+
                 // Verificar si la lista esta vacía
                 if (properties.Count > 0)
                 {
