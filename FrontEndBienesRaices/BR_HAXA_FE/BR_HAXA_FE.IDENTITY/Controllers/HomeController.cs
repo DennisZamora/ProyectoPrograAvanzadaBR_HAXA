@@ -1,9 +1,11 @@
 ﻿using BR_HAXA_FE.IDENTITY.Models;
+using BR_HAXA_FE.IDENTITY.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace BR_HAXA_FE.IDENTITY.Controllers
 {
@@ -20,14 +22,24 @@ namespace BR_HAXA_FE.IDENTITY.Controllers
         {
             try
             {
+                PropiedadServices ps = new PropiedadServices();
+                ImagenesServices im = new ImagenesServices();
                 var properties = new List<PropiedadV>();
-                var prop = "";//PropiedadServices.GetAll();
-                var imagen = "";//ImagenServices.GetAll();
-                //properties.Add(new PropiedadV
-                //{
-                //    Property = prop,
-                //    Img = imagen
-                //});
+                List<Propiedad> props = ps.GetAll().ToList();
+                List<Imagenes> imagenes=im.GetAll().ToList();
+                foreach (var item in props)
+                {
+                    List<Imagenes> imProp=new List<Imagenes>();
+                    imProp=(from x in imagenes
+                            where x.IdPropiedad == item.IdPropiedad
+                            select x).ToList();
+                    properties.Add(new PropiedadV
+                    {
+                        Property = item,
+                        Img = imProp
+                    });
+                }
+
 
                 // Verificar si la lista esta vacía
                 if (properties.Count > 0)
@@ -45,7 +57,45 @@ namespace BR_HAXA_FE.IDENTITY.Controllers
             }
         }
 
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult Propiedad(int id)
+        {
+            PropiedadServices action = new PropiedadServices();
+            try
+            {
+                ImagenesServices im = new ImagenesServices();
+                List<Imagenes> imagenes = im.GetAll().ToList();
+                List<Imagenes> imProp = new List<Imagenes>();
+                var propiedad = action.GetOneById(id);
+                var properties = new PropiedadV();
+                
+                imProp = (from x in imagenes
+                          where x.IdPropiedad == id
+                          select x).ToList();
+                properties = new PropiedadV
+                {
+                    Property = propiedad,
+                    Img = imProp
+                };
+
+                if (properties == null)
+                {
+                    return View("Error");
+                }
+                else
+                {
+                    return View("Propiedad", properties);
+                }
+            }
+            catch (Exception)
+            {
+                return View("Error");
+            }
+
+        }
+
+
+            public IActionResult Privacy()
         {
             return View();
         }

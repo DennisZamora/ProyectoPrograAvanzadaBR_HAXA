@@ -47,17 +47,24 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <!-- Footer -->
-        <!--<footer class="w3-center w3-black w3-padding-16">
-            <p>&copy; @DateTime.Now.Year Bienes Raices HAXA</p>
-        </footer>-->
+        
     </div>
+    <hr />
+        <hr id="unhr" />
+        <!-- Footer -->
+        <footer id="footer" class="w3-center w3-black w3-padding-16">
+
+            <p>Bienes Raices HAXA</p>
+        </footer>
 
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/JS/index.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -5,11 +5,19 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <a class="nav-link text-dark" class="w3-bar-item w3-button" asp-area="" asp-controller="Empleadoes" asp-action="Index">Gestión de empleados</a>
-    <a class="nav-link text-dark" class="w3-bar-item w3-button" asp-area="" asp-controller="Rols" asp-action="Index">Gestión de roles</a>
-    <a class="nav-link text-dark" class="w3-bar-item w3-button" asp-area="" asp-controller="Usuarios" asp-action="Index">Gestión de usuarios</a>
-    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-        <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Empleadoes" asp-action="Index">Empleados</a>
+    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Usuarios" asp-action="Index">Usuarios</a>
+    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Rols" asp-action="Index">Roles</a>
+    
+    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Propiedads" asp-action="Index">Propiedades</a>
+    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Imagenes" asp-action="Index">Imagenes</a>
+    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
+    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Estadoes" asp-action="Index">Estados</a>
+
+    <a class="w3-bar-item w3-button" asp-area="" asp-controller="Citas" asp-action="Index">Citas</a>
+
+    <form class="w3-bar-item" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+        <button type="submit" class="w3-bar-item w3-button">Logout</button>
     </form>
 
 
@@ -18,7 +26,7 @@
 else
 {
 
-    <a class="nav-link text-dark" class="w3-bar-item w3-button" asp-area="Identity" asp-page="/Account/Login">Iniciar Sesion</a>
-    <a class="nav-link text-dark" class="w3-bar-item w3-button" asp-area="Identity" asp-page="/Account/Register">Registrar</a>
+    <a class="w3-bar-item w3-button" asp-area="Identity" asp-page="/Account/Login">Iniciar Sesion</a>
+    <a class="w3-bar-item w3-button" asp-area="Identity" asp-page="/Account/Register">Registrar</a>
 }
 

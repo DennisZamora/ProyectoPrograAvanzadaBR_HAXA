@@ -29,6 +29,19 @@
 
         
         <div>
+            <div class="boost-pfs-filter-left-col">
+                <div class="boost-pfs-filter-refine-by-wrapper-v"></div>
+                <div class="boost-pfs-filter-tree boost-pfs-filter-tree-v boost-pfs-filter-tree-mobile-style2 boost-pfs-filter-tree-mobile-sticky" id="boost-pfs-filter-tree">
+                    <div class="boost-pfs-filter-tree-content" aria-live="polite" role="navigation" aria-label="Product filter">
+                        <div class="boost-pfs-filter-"></div>
+                        <div class="boost-pfs-filter-refine-by-wrapper" >
+                            <!--Filter Section-->
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="" id="property">
                 <h3 class="w3-border-bottom w3-border-light-grey" style="text-align:center;">Propiedades</h3>
@@ -36,9 +49,8 @@
 
             <div id="prop" class="boost-pfs-filter-products boost-pfs-filter-product-item-layout-no-border boost-pfs-filter-product-item-label-top_left boost-pfs-filter-product-item-swatch_color_display_type_image_product boost-pfs-filter-swatch-shape-circle boost-pfs-filter-product-item-text-alignment-left" style="min-height: 0px;">
                 <!-- Todas las propiedades aqui -->
-                <partial>
                     @Html.Partial("Propiedades", new List<BR_HAXA_FE.IDENTITY.Models.PropiedadV>(Model))
-                </partial>
+                
             </div>
         </div>
 
