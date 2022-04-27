@@ -4,10 +4,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BR_HAXA_FE
 {
@@ -30,7 +26,9 @@ namespace BR_HAXA_FE
             services.AddScoped<IEmpleadoServices, EmpleadoServices>();
             services.AddScoped<ICitaServices, CitaServices>();
             services.AddScoped<ICategoriaServices, CategoriaServices>();
-
+            services.AddScoped<IEstadoServices, EstadoServices>();
+            services.AddScoped<IPropiedadServices, PropiedadServices>();
+            services.AddScoped<IImagenesServices, ImagenesServices>();
 
         }
 

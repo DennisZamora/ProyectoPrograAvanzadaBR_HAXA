@@ -2,8 +2,6 @@
 using BR_HAXA_FE.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BR_HAXA_FE.Controllers

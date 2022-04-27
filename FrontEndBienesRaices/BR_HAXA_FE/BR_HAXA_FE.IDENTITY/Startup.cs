@@ -2,17 +2,11 @@ using BR_HAXA_FE.IDENTITY.Data;
 using BR_HAXA_FE.IDENTITY.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BR_HAXA_FE.IDENTITY
 {
@@ -41,6 +35,9 @@ namespace BR_HAXA_FE.IDENTITY
             services.AddScoped<IEmpleadoServices, EmpleadoServices>();
             services.AddScoped<ICitaServices, CitaServices>();
             services.AddScoped<ICategoriaServices, CategoriaServices>();
+            services.AddScoped<IEstadoServices, EstadoServices>();
+            services.AddScoped<IPropiedadServices, PropiedadServices>();
+            services.AddScoped<IImagenesServices, ImagenesServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

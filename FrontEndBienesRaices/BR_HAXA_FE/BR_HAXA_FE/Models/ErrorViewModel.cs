@@ -1,5 +1,3 @@
-using System;
-
 namespace BR_HAXA_FE.Models
 {
     public class ErrorViewModel

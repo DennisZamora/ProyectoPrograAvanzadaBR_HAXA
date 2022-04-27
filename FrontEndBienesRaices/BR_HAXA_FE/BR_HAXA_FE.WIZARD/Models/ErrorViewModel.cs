@@ -1,5 +1,3 @@
-using System;
-
 namespace BR_HAXA_FE.WIZARD.Models
 {
     public class ErrorViewModel

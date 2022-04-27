@@ -1,12 +1,9 @@
 ﻿using BR_HAXA_FE.IDENTITY.Models;
-using BR_HAXA_FE.IDENTITY.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BR_HAXA_FE.IDENTITY.Controllers
 {
