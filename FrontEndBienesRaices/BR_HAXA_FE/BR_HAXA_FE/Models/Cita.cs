@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
+﻿// Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
@@ -15,7 +12,7 @@ namespace BR_HAXA_FE.Models
         public string FechaInicio { get; set; }
         public string FechaFinal { get; set; }
 
-        //public virtual Propiedad IdPropiedadNavigation { get; set; }
+        public virtual Propiedad IdPropiedadNavigation { get; set; }
         public virtual Usuario IdUsuarioNavigation { get; set; }
     }
 }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "912aqIGp3pIFnDf1QyK2lIsbmcGTWPj2ceYzlzDTfMpRDQPXx/cYjBlJoA+LJiCj2y8Pm2xkls20pgODv0HYpA==",
+  "dgSpecHash": "GSunp5BLrrbSt1ZFG8nDsJULFXFsgNuEOpYAI36sukO6cEcpuxtfCRFVhBhK0BBLwVfG1H3c2HQb36Acv6s4GA==",
   "success": true,
-  "projectFilePath": "D:\\Universidad\\Vll\\PrograAvanzada\\ProyectoPrograAvanzadaBR_HAXA\\ProyectoPrograAvanzadaBR_HAXA\\FrontEndBienesRaices\\BR_HAXA_FE\\BR_HAXA_FE\\BR_HAXA_FE.csproj",
+  "projectFilePath": "C:\\Users\\oscar\\Documents\\7mo Cuat\\3. Programacion Avanzada Web\\Proyecto\\ProyectoPrograAvanzadaBR_HAXA\\FrontEndBienesRaices\\BR_HAXA_FE\\BR_HAXA_FE\\BR_HAXA_FE.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\denza\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\oscar\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }
