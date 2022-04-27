@@ -144,7 +144,7 @@ namespace BR_HAXA_FE.IDENTITY.Services
                     var buffer = System.Text.Encoding.UTF8.GetBytes(content);
                     var byteContent = new ByteArrayContent(buffer);
                     byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                    var postTask = cl.PutAsync("api/Propiedad/" + t.IdUsuario, byteContent).Result;
+                    var postTask = cl.PutAsync("api/Propiedad/" + t.IdPropiedad, byteContent).Result;
 
 
                     if (!postTask.IsSuccessStatusCode)

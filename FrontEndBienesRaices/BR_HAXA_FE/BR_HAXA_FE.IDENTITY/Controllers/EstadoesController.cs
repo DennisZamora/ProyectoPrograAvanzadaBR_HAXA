@@ -54,7 +54,7 @@ namespace BR_HAXA_FE.IDENTITY.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdEstado,Nombre")] Estado estado)
+        public async Task<IActionResult> Create([Bind("Nombre")] Estado estado)
         {
             if (ModelState.IsValid)
             {

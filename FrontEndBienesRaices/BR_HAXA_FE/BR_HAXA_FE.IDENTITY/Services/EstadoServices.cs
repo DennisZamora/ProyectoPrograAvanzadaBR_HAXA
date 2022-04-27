@@ -18,7 +18,7 @@ namespace BR_HAXA_FE.IDENTITY.Services
                     cl.BaseAddress = new Uri(Program.baseurl);
                     cl.DefaultRequestHeaders.Clear();
                     cl.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                    HttpResponseMessage res = cl.DeleteAsync("api/Estado/" + t.IdEstado.ToString()).Result;
+                    HttpResponseMessage res = cl.DeleteAsync("api/Estados/" + t.IdEstado.ToString()).Result;
 
                     if (!res.IsSuccessStatusCode)
                     {
@@ -40,7 +40,7 @@ namespace BR_HAXA_FE.IDENTITY.Services
                 cl.BaseAddress = new Uri(Program.baseurl);
                 cl.DefaultRequestHeaders.Clear();
                 cl.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage res = cl.GetAsync("api/Estado").Result;
+                HttpResponseMessage res = cl.GetAsync("api/Estados").Result;
 
                 if (res.IsSuccessStatusCode)
                 {
@@ -59,7 +59,7 @@ namespace BR_HAXA_FE.IDENTITY.Services
                 cl.BaseAddress = new Uri(Program.baseurl);
                 cl.DefaultRequestHeaders.Clear();
                 cl.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage res = await cl.GetAsync("api/Estado");
+                HttpResponseMessage res = await cl.GetAsync("api/Estados");
 
                 if (res.IsSuccessStatusCode)
                 {
@@ -78,7 +78,7 @@ namespace BR_HAXA_FE.IDENTITY.Services
                 cl.BaseAddress = new Uri(Program.baseurl);
                 cl.DefaultRequestHeaders.Clear();
                 cl.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage res = cl.GetAsync("api/Estado/" + id).Result;
+                HttpResponseMessage res = cl.GetAsync("api/Estados/" + id).Result;
 
                 if (res.IsSuccessStatusCode)
                 {
@@ -97,7 +97,7 @@ namespace BR_HAXA_FE.IDENTITY.Services
                 cl.BaseAddress = new Uri(Program.baseurl);
                 cl.DefaultRequestHeaders.Clear();
                 cl.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage res = await cl.GetAsync("api/Estado/" + id);
+                HttpResponseMessage res = await cl.GetAsync("api/Estados/" + id);
 
                 if (res.IsSuccessStatusCode)
                 {
@@ -119,7 +119,7 @@ namespace BR_HAXA_FE.IDENTITY.Services
                     var buffer = System.Text.Encoding.UTF8.GetBytes(content);
                     var byteContent = new ByteArrayContent(buffer);
                     byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                    var postTask = cl.PostAsync("api/Estado", byteContent).Result;
+                    var postTask = cl.PostAsync("api/Estados", byteContent).Result;
 
                     if (!postTask.IsSuccessStatusCode)
                     {
@@ -144,7 +144,7 @@ namespace BR_HAXA_FE.IDENTITY.Services
                     var buffer = System.Text.Encoding.UTF8.GetBytes(content);
                     var byteContent = new ByteArrayContent(buffer);
                     byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                    var postTask = cl.PutAsync("api/Estado/" + t.IdEstado, byteContent).Result;
+                    var postTask = cl.PutAsync("api/Estados/" + t.IdEstado, byteContent).Result;
 
 
                     if (!postTask.IsSuccessStatusCode)
